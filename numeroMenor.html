@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    var str = [];
+    //    var maior = 0;
+
+    //    for(let i =0; i<2; i++){
+    //    var numero = parseInt(prompt('Digite um numero'));
+    //    if(numero > maior){
+    //        maior = numero;
+    //    }
+    //    str.push(numero);
+    //    }
+    //     document.write(`Entre os numeros ${str} o nemor é ${numero}.`);
+        var numero1 = parseInt(prompt('Digite um numero:'));
+        var numero2 = parseInt(prompt('Digite outro numero:'));
+
+        function menorNumero() {
+            if(numero1<numero2){
+                document.write(`Os numeros digitados foi ${numero1} e ${numero2}, e o menor numero é o ${numero1}.`);
+            }else{
+                document.write(`Os numeros digitados foi ${numero1} e ${numero2}, e o maior numero é o ${numero2}.`);
+            }
+        }
+        menorNumero();
+     </script>
+</body>
+</html>

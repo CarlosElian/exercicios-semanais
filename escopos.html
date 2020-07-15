@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopos</title>
+</head>
+<body>
+    <script>
+        // Aqui é o escopo Global
+        //var nome = 'Fulano <br>';
+
+        // Geralmente chamamos isso de Function Scopes
+        //function teste(){
+            //Aqui dentro é um escopo só que é local
+            //document.write(nome);
+            //var idade = 25;
+        //}
+        //document.write(nome);
+        //teste();
+        //document.write(idade);
+
+        //let nome = 'Fulano'; //Let é um var melhorado
+
+        //if(true){ //Aqui não é local, é global tbm
+
+            //let nome ='Ciclano';
+            //document.write(nome);
+        //}
+        
+       // document.write(nome);
+
+       var nome = 'Fulano';
+       var pessoa = {nome: "Beltrano", idade: 21};
+       const pular = '<br>';
+
+       document.write(nome);
+       document.write(pular);
+       document.write(JSON.stringify(pessoa));
+       document.write(pular);
+
+       const nome2 = nome;
+       const pessoa2 = pessoa;
+
+       nome2 = "Ciclano";
+       pessoa2.nome = "Ciclano";
+
+       document.write('Segunda parte');
+       document.write(nome2);
+       document.write(pular);
+       document.write(JSON.stringify(pessoa2));
+       document.write(pular);
+
+       document.write('Terceira Parte');
+       document.write(nome);
+       document.write(pular);
+       document.write(JSON.stringify(pessoa));
+       document.write(pular);
+
+       //Aprender a clona objetos
+
+       var pessoa3 = Object.assign(pessoa,{})
+
+    </script>
+</body>
+</html>

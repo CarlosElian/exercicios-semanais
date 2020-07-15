@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: red; text-align: center;">Turma T1 - SerraTec</h1>
+
+    <script>
+        /*Objeto para toda a turma do curso, dizendo nome e idade e sexo ok
+        Objeto para disciplinas, ok
+        Fazer um jeito de mostrar essas informacoes ao usuario ok
+        E uma lista de disciplina separadas ok
+        Quantos alunos do sexo M
+        Quantos alunos do sexo F
+        Quantos sao maiores de idade
+        Quantos sao menores de idade
+        media de idade ok
+        */
+        var alunos = [ //Tô criando um Array com todos os objetos
+            {
+                nome: "Bianca Moraes",
+                idade: 38,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Breno Bragança",
+                idade: 20,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Bruno de Barros",
+                idade: 35,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Carlos Elian",
+                idade: 18,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Daniel Araújo",
+                idade: 36,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Dione Vianna",
+                idade: 34,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Elvia Masiero",
+                idade: 23,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Estefany Cristina",
+                idade: 25,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Evódio Aquino",
+                idade: 58,
+                sexo: "Masculino"
+            },
+            {
+                nome: "Gabriel Carreiro",
+                idade: 23,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Gabriela Oliveira",
+                idade: 28,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Guilherme Henrique",
+                idade: 19,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Jean-Luc Ernest",
+                idade: 20,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Laís Moreira",
+                idade: 31,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Luana Santos",
+                idade: 23,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Luciele Rodrigues",
+                idade: 33,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Lucca Martinelli",
+                idade: 19,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Nathália Carvalho",
+                idade: 18,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Paulo Eduardo",
+                idade: 19,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Priscila Barcala",
+                idade: 27,
+                sexo: "Feminino",
+            },
+            {
+                nome: "Rodrigo Lifsitch",
+                idade: 33,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Sérgio Moreira",
+                idade: 21,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Tiago Zozimo",
+                idade: 25,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Tony de Morais",
+                idade: 34,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Victor Freitas",
+                idade: 26,
+                sexo: "Masculino",
+            },
+            {
+                nome: "Victor Grillo",
+                idade: 28,
+                sexo: "Masculino",
+            }
+        ]
+        var disciplinas = ["JavaScripty", " CSS", " HTML", " Ingles"]
+
+
+
+        function mostrarAlunos(alunos){ //Funçao que quando ativada ira execulta essa ação
+            for(objeto of alunos){ //Laço de repetição, que ira ficar repetindo até a exigência for concluida. O (For Of) vai tirar um objeto de cada Array
+                nome: objeto.nome;
+                idade: objeto.idade;
+                sexo: objeto.sexo;
+
+                if(objeto.sexo == 'Masculino'){
+                    document.write(`<h3 style = "color: lightblue">O aluno ${objeto.nome}, tem ${objeto.idade} de idadde.<br>`);
+                }else if(objeto.sexo == 'Feminino'){
+                    document.write(`<h3 style = "color: pink"> A aluna ${objeto.nome}, tem ${objeto.idade} de idadde.<br>`);
+                }
+
+            }
+        }
+        mostrarAlunos(alunos);//Vai ativar a function
+        document.write(`<p align="right" style = "color: white; margin-top: -27.7cm; margin-bottom: -0.5cm">As disciplinas são ${disciplinas}.</p><br><br>`);
+
+        var soma = 38 + 20 + 35 + 18 + 36 + 34 + 23 + 25 + 58 + 23 + 28 + 19 + 20 + 31 + 23 + 33 + 19 + 18 + 19 + 27 + 33 + 21 + 25 + 34 + 26 + 28;
+        var mediaIdade = soma/26; //dividi pelo tanto de alunos que tem para fazer a media
+
+        document.write(`<p align="right" style ="color: white; margin-top: 0cm;  margin-bottom: 0.1cm">A media de idade doas alunos é: ${mediaIdade}</p><br>`);
+        
+                document.write(`<p align="right" style ="color: white; margin-top:0cm; margin-bottom: 0.1cm">O aluno mais velho é o Evodio Aquino</p>><br>`);
+
+                document.write(`<p align="right" style ="color: white; margin-top:0cm; margin-bottom: 0.1cm">O aluno mais novo é Carlos Elian e a Nathália Carvalho</p><br>`);
+
+    </script>
+    <img src="serratec.jpg"; style="height: 250px;" align="right"> 
+</body>
+</html>

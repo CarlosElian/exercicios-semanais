@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="email">Email</label> <!--Label é o nome para o id-->
+        <input id="email" type="email" placeholder="exemplo@gmail.com" required> <br> 
+    <!--O " input id" é para adicionar uma caixa para escrever. O "type" é para dizer se é um text, password e etc-->
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" placeholder="12345678" required> <br><br>
+    <!--O placehold é para mostrar um exemplo de como tem qer feito. O "required" mostra um alerta mostrando que é para preencher-->
+        <label for="lembrar">Lembre-me</label>
+        <input id="lembrar" type="checkbox" required> <br><br><br>
+        <!--"Type checkbox é para adidinar uma pergunta para lembrar a senha"-->
+        <button type="button" onclick="login()">Entrar</button>
+        <!--Criei um botão e quando ele for clicado vai ativar a function(longin())-->
+        <button type="reset">Limpar</button>
+        <!--Criei um botão para limpar a tela-->
+    </form>
+
+    <br>
+
+    <script>
+        
+        var email = document.getElementById('email');
+        // Salvei uma variavel email. E o (docment.getElementId) vai obter o valor da caixa de texto
+        var senha = document.getElementById('senha');
+        // Salvei uma variavel senha. E o (docment.getElementId) vai obter o valor da caixa de texto
+        function login(){ // Na hora que aperta o butão essa funçao será ativada
+          if(verificarAceso(email.value,senha.value)){
+            alert('Bem vindo ao nosso sistema');
+          }else{
+            alert('Usuario e senha invalidos');
+          }
+       }
+
+       function verificarAceso(email,senha) { // A funçao vai ser ativada no email e senha
+           if(email.toLowerCase() == 'admin@admin.com' && senha == '123'){
+               //email.toLowerCase vai deixar tudo minusculo. E só sera ativa se as condiçoes acima forem true
+               return true;
+           }
+           return false;
+
+       }
+    </script>
+
+</body>
+</html>
